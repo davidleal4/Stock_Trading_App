@@ -58,6 +58,21 @@ services:
       timeout: 10s
       retries: 3
 
+  # Frontend - Next.js React App
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: stock_frontend_dev
+    environment:
+      - NODE_ENV=development
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+    depends_on:
+      - backend
+
 volumes:
   timescale_data_dev:
   redis_data_dev:
