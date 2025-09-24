@@ -2,9 +2,8 @@
    If you see "Unknown at rule @tailwind", ensure your build tool is configured for Tailwind.
    If you want to avoid errors in direct browser usage, remove these lines and import the compiled CSS instead. */
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Import the compiled Tailwind CSS instead of using @tailwind directives */
+/* Example: @import './tailwind-output.css'; */
 
 html {
   font-feature-settings: "cv02","cv03","cv04","cv11";
