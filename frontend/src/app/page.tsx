@@ -224,15 +224,15 @@ export default function Dashboard() {
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
-                <Button className="w-full" variant="outline">
+                <Button className="w-full border border-input bg-background hover:bg-muted">
                   <TrendingUp className="h-4 w-4 mr-2" />
                   View All Stocks
                 </Button>
-                <Button className="w-full" variant="outline">
+                <Button className="w-full border border-input bg-background hover:bg-muted">
                   <BarChart3 className="h-4 w-4 mr-2" />
                   Trading Dashboard
                 </Button>
-                <Button className="w-full" variant="outline">
+                <Button className="w-full border border-input bg-background hover:bg-muted">
                   <Activity className="h-4 w-4 mr-2" />
                   Portfolio Analysis
                 </Button>
