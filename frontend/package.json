@@ -1,0 +1,45 @@
+{
+  "name": "stock-trading-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "3.3.2",
+    "@types/node": "20.9.1",
+    "@types/plotly.js": "2.12.29",
+    "@types/react": "18.2.38",
+    "@types/react-dom": "18.2.17",
+    "autoprefixer": "10.4.16",
+    "axios": "^1.12.2",
+    "clsx": "2.0.0",
+    "date-fns": "2.30.0",
+    "framer-motion": "10.16.5",
+    "lucide-react": "0.293.0",
+    "next": "^14.2.33",
+    "plotly.js": "2.27.0",
+    "postcss": "8.4.31",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-hook-form": "7.48.2",
+    "react-plotly.js": "2.6.0",
+    "recharts": "2.8.0",
+    "swr": "2.2.4",
+    "tailwind-merge": "2.0.0",
+    "tailwindcss": "3.3.5",
+    "typescript": "5.2.2",
+    "zod": "3.22.4",
+    "zustand": "4.4.6"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "0.5.7",
+    "@tailwindcss/typography": "0.5.10",
+    "eslint": "8.54.0",
+    "eslint-config-next": "14.0.3"
+  }
+}
