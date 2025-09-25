@@ -3,10 +3,10 @@
 import { DashboardLayout } from "@/components/layout/dashboard-layout"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { TrendingUp, TrendingDown, DollarSign, BarChart3, Users, Activity } from "lucide-react"
+import { TrendingUp, TrendingDown, DollarSign, BarChart3, Activity } from "lucide-react"
 import { motion } from "framer-motion"
 import { useEffect, useState } from "react"
-import axios from "axios"
+import api from "@/lib/api"
 
 interface TrendingStock {
   symbol: string
@@ -28,11 +28,11 @@ export default function Dashboard() {
     const fetchData = async () => {
       try {
         // Fetch trending stocks
-        const trendingResponse = await axios.get('http://localhost:5000/api/trending')
+        const trendingResponse = await api.get('/api/trending')
         setTrendingStocks(trendingResponse.data.slice(0, 4))
 
         // Fetch portfolio
-        const portfolioResponse = await axios.get('http://localhost:5000/api/portfolio')
+        const portfolioResponse = await api.get('/api/portfolio')
         setPortfolio(portfolioResponse.data)
       } catch (error) {
         console.error('Error fetching data:', error)
@@ -44,7 +44,7 @@ export default function Dashboard() {
     fetchData()
   }, [])
 
-  const portfolioValue = Object.entries(portfolio.stocks).reduce((total, [symbol, data]) => {
+  const portfolioValue = Object.entries(portfolio.stocks).reduce((total, [, data]) => {
     return total + (data.quantity * data.avgPrice)
   }, portfolio.cash)
 

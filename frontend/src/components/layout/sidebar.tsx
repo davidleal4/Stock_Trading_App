@@ -57,9 +57,11 @@ export function Sidebar({ className }: SidebarProps) {
           </motion.div>
         )}
         <Button
-          color="ghost"
+          variant="ghost"
+          size="icon"
           onClick={() => setIsCollapsed(!isCollapsed)}
           className="h-8 w-8"
+          aria-label={isCollapsed ? "Expand sidebar" : "Collapse sidebar"}
         >
           {isCollapsed ? (
             <ChevronRight className="h-4 w-4" />
@@ -78,7 +80,7 @@ export function Sidebar({ className }: SidebarProps) {
           return (
             <Link key={item.name} href={item.href}>
               <Button
-                color={isActive ? "secondary" : "ghost"}
+                variant={isActive ? "secondary" : "ghost"}
                 className={cn(
                   "w-full justify-start gap-3 h-11",
                   isCollapsed && "justify-center px-0",
