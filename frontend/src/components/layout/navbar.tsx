@@ -31,13 +31,13 @@ export function Navbar({ className }: NavbarProps) {
 
         {/* Right side actions */}
         <div className="flex items-center gap-3">
-          <Button className="h-9 w-9 bg-transparent hover:bg-gray-100">
+          <Button variant="ghost" size="icon" aria-label="Notifications" className="h-9 w-9">
             <Bell className="h-4 w-4" />
           </Button>
-          
+
           <ThemeToggle />
-          
-          <Button className="h-9 w-9 bg-transparent hover:bg-gray-100">
+
+          <Button variant="ghost" size="icon" aria-label="Account" className="h-9 w-9">
             <User className="h-4 w-4" />
           </Button>
         </div>
