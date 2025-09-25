@@ -82,19 +82,17 @@ export default function Dashboard() {
   return (
     <DashboardLayout>
       <div className="space-y-8">
-        {/* Header */}
+        {/* Homepage Welcome Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="flex items-center justify-between"
+          className="flex flex-col items-center justify-center py-10"
         >
-          <div>
-            <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
-            <p className="text-muted-foreground">
-              Welcome back! Here's your trading overview.
-            </p>
-          </div>
-          <Button className="bg-blue-600 hover:bg-blue-700">
+          <h1 className="text-4xl font-extrabold tracking-tight mb-2 text-blue-700 dark:text-blue-400">Welcome to the Stock Trading App</h1>
+          <p className="text-lg text-muted-foreground mb-4 text-center max-w-xl">
+            Manage your portfolio, view trending stocks, and make trades with ease. Use the dashboard below for a quick overview and access all features from the sidebar.
+          </p>
+          <Button className="bg-blue-600 hover:bg-blue-700 text-lg px-6 py-3">
             Start Trading
           </Button>
         </motion.div>
@@ -181,7 +179,7 @@ export default function Dashboard() {
                         <div className="flex items-center space-x-4">
                           <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/20 rounded-lg flex items-center justify-center">
                             <span className="font-semibold text-blue-600 dark:text-blue-400">
-                              {stock.symbol.slice(0, 2)}
+                              {stock.symbol}
                             </span>
                           </div>
                           <div>
